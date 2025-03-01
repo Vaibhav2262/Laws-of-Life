@@ -1,0 +1,257 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Easy to read this </title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %} ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="static/img/box-3-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About us</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index">Back to Main</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+    </section> <!-- Header End -->
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="promo-title"> Laws For Life</p>
+                    <p>How gro the life sistemataic will be the given in the this web page you will how to gro fast and
+                        how to inter reacte with each other people and so many thing in this web page you can go the web
+                        and beuld your self and and your Mental Ability power. You can do it any thing you will be the
+                        real this laws for your life your mind can not be go Unwanted thing. And you will aply the some
+                        low in your life you will the perfect person in your life that is so easy to gro yourself.
+                    </p>
+                    <a href="#"><img src="static/images/play.png" alt="" class="play-btn">Watch More</a>
+                </div><!-- col md 1 end -->
+
+                <div class="col-md-6 text-center">
+                    <img src="static/images/home2.png" alt="" class="img-fluid">
+                </div><!-- Col md 2 end-->
+            </div><!-- Row end-->
+        </div>
+
+        <img src="static/images/wave1.png" alt="" class="bottom-img">
+    </section>
+
+    <!--  Services Section   -->
+    <section id="services">
+        <div class="container text-center">
+            <h1 class=" h " style="color: rgb(238, 242, 232);">N E V E R O U T S H I N E T H E M A S T E R</h1>
+            <div class="row text-center">
+                <div class="col-md-4 services">
+                    <img src="static/images/service1.png" alt="" class="service-img">
+                    <h4>Laws for life</h4>
+                    <p class="p">
+                        How gro the life sistemataic will be the given in the this web page you will
+                        how to gro fast
+                        and how to inter reacte with each other people and so many thing in this web page you can go the
+                        web and
+                        beuld your self and
+                        and your Mental Ability power. You can do it any thing you will be the real this laws for your
+                        life your
+                        mind can not be go Unwanted thing. And you will aply the some low in your life you will the
+                        perfect
+                        person
+                        in your life that is so easy to gro yourself.
+                    </p>
+                </div>
+
+                <div class="col-md-4 services">
+                    <img src="static/images/service2.png" alt="" class="service-img">
+                    <h4>Pay Attention</h4>
+                    <p class="p">
+                        I know, In day-today life will be so many thing happen in over self. And do not focuse in your
+                        body and
+                        so
+                        on. Because every thing will be in the mobile so any thing will chose and go the App and so many
+                        time
+                        will
+                        be the gone in mobile and now will be you can't give any time in your self so you can go the web
+                        page
+                        every
+                        thing in this web page. How to Encurege yourself and How to build your mind and and so on !
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 services">
+                    <img src="static/images/service3.png" alt="" class="service-img">
+                    <h4>One rule for life</h4>
+                    <p class="p">
+                        Let’s get one thing straight — you cannot accomplish anything unless you get yourself some of
+                        the
+                        clarity
+                        that
+                        comes from creating space in your life, in your relationships and your environment.
+                        You need to reduce, cut back, simplify—Only then will you stop the feeling of being overwhelmed
+                        and
+                        rushed.
+                        Give anything you haven’t used for the past 3 years to charity. Get organized.
+                        Enjoy the concept of enjoying without owing, and appreciating without acquiring.
+                    </p>
+                </div>
+
+            </div>
+            {% if user.is_authenticated %}
+            <div>
+                <a href="/index"> <button type="button" class="btn btn-primary">Read More</button></a>
+            </div>
+            {% else %}
+            <div>
+                <a href="/login"> <button type="button" class="btn btn-primary">Read More</button></a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!------------ About Us--------------->
+    <section id="about-us">
+        <div class="container">
+            <h1 class="title text-center" style="font-family:Lombardia Script;"> Why chouse us ?</h1>
+            <div class="row">
+                <div class="col-md-6 about-us">
+                    <p class="about-title" style="font-family: Lombardia Script;">Why we're Diffenrent !</p>
+                    <ul style="text-transform: uppercase;">
+                        <li>Belive in doing business with honesty !</li>
+                        <li>Break the Rules Of life !</li>
+                        <li>Nothing is impossible, the word itself says ‘I’m possible !</li>
+                        <li>Start where you are. Use what you have. Do what you can !</li>
+                        <li>A champion is someone who gets up when he can’t. !</li>
+                        <li>To the mind that is still, the whole universe surrenders. !</li>
+                        <li>Believe you can and you’re halfway there !</li>
+                        <li>In a gentle way, you can shake the world !</li>
+                    </ul>
+                </div><!--col end-->
+                <div class="col-md-6">
+                    <img src="static/images/network.png" alt="" class="img-fluid">
+                </div><!--col end-->
+            </div>
+        </div>
+    </section>
+    <!------------------ Testimonials  ----------------------->
+    <section id="testimonials">
+        <div class="container ">
+            <h1 class="title text-center" style="font-family: Lombardia Script;">$ What Clients Say $</h1>
+            <div class="row offset-1">
+                <div class="col-md-5 testimonials">
+                    <p>God Bless You ! Live This ! I Wouldn't have come this far in my life adventure if it weren't for the Laws of Life Essay Contest. It is with deep gratitude that I thank the Laws of Life program for the opportunities that you've given me.</p>
+                    <img src="static/images/user1.jpg" alt="">
+                    <p class="user-details"><b>Agelina</b><br>Co-founder at-xyz</p>
+                </div><!--First col end-->
+                <div class="col-md-5 testimonials">
+                    <p>I was looking for these laws on Every social media and everyware also google and Now found 'Laws Of Life' and I will be read and Find the such a Destiny for My Life.</p>
+                    <img src="static/images/user2.jpg" alt="">
+                    <p class="user-details"><b>johan doe</b><br>director at-xyz</p>
+                </div><!--second col end-->
+            </div>
+        </div>
+    </section>
+
+    <!------------- Social Media section----------------->
+    <section id="social-media">
+        <div class="container text-center">
+            <p style="font-family : serif;">Find us on social media</p>
+        </div>
+        <div class="social-icons text-center">
+            <a href="#"><img src="static/images/facebook-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/twitter-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/twitter-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/instagram-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/whatsapp-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/linkedin-icon.png" alt=""></a>
+            <a href="#"><img src="static/images/snapchat-icon.png" alt=""></a>
+        </div>
+    </section>
+
+    <!--------Footer section----------->
+    <section id="footer">
+        <img src="static/images/wave2.png" alt="" class="footer-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="static/img/box-3-nav.png" alt="">
+                    <p>F - E - A - R has two meanings :</p>
+                    <p>Forget Everythings And Run</p>
+                    <p>Face Everythings And Rise</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>Contact Us</b></p>
+                    <p><i class="bi bi-geo-alt"></i>World Hart Center, Nothing Universe</p>
+                    <p><i class="bi bi-voicemail"></i>+1 0000 000 000</p>
+                    <p><i class="bi bi-envelope-heart"></i>xyz@gmail.com</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>You Are Intrested </b></p>
+                    <input type="text" name="" class="form-control" placeholder="click On !">
+                    <a href="#"><button type="button" class="btn btn-primary">Go</button></a>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> <i class="bi bi-alipay"></i>&nbsp;&nbsp;Website Crafted by <i style="font-size: 20px;">ⓥ ⓐ ⓘ ⓑ ⓗ ⓐ
+                    ⓥ</i></p>
+            </p>
+        </div>
+    </section>
+
+    <!--------   Smooth Scroll------------>
+    <script src="static/assets/js/smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+
+</html>

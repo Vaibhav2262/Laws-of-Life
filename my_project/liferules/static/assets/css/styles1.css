@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(240, 242, 241);
+}
+
+
+.div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    padding-left: 20px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars {
+    color: #fff;
+    font-size: 40px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/**-------------------  Banner Section ------------------   **/
+
+#banner {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    color: #fff;
+    padding-top: 5%;
+}
+
+.promo-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.play-btn {
+    width: 45px;
+    margin: 20px;
+}
+
+#banner a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom-img {
+    width: 100%;
+}
+
+.first {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+
+/**-----------------------------------------------   **/
+
+/**------------------Filtet sec -----------------------------   **/
+
+
+.filter-sec {
+    text-transform: capitalize;
+    text-align: justify;
+    line-height: 3em;
+    font-family: cursive;
+}
+
+.filter-sec ul a {
+    color: rgb(41, 123, 70);
+    text-shadow: 0px 0px 1px rebeccapurple;
+    text-decoration: none;
+}
+
+.filter-img {
+    width: 100%;
+    box-shadow: 0 0 3px 0 red;
+    background-color: #f9e3e3;
+}
+
+.filter-img-1 {
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 0 3px 0 red;
+    background-color: #f9e3e3;
+}
+
+/**------------------main section-----------------------------   **/
+
+.i {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #111;
+    text-shadow: 0 0 1px red;
+    word-spacing: 0.2em;
+    text-align: justify;
+}
+
+.common p {
+    font-size: 15px;
+    font-family: cursive;
+    line-height: 2em;
+    word-spacing: 0.2em;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#first_13 .common p li {
+    font-size: 15px;
+    font-family: cursive;
+    line-height: 0em;
+    word-spacing: 0.2em;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.r {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 0 red;
+    color: #111;
+}
+
+
+/*------------Testimonials section-------------*/
+
+#testimonials {
+    margin: 100px 0;
+}
+
+.testimonials {
+    border-left: 4px solid #7b1798;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testimonials img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.user-details {
+    display: inline-block;
+    font-size: 12px;
+}
+
+/**-----------------------------------------------   **/
+
+/*------------Footer section section-------------*/
+
+#footer {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    color: #fff;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-box .bi {
+    margin-right: 10px;
+    font-size: 25px;
+    height: 20px;
+    width: 40px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.footer-box .form-control {
+    box-shadow: none;
+    border: none;
+    border-radius: 25px;
+    max-width: 250px;
+}
+
+.footer-box .btn-primary {
+    box-shadow: none;
+    border: none;
+    border-radius: 25px;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.footer-box a {
+    text-decoration: none;
+}
+
+hr {
+    background-color: #fff;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/**-----------------------------------------------   **/
+
+/* Social media */
+
+
+.social-icons img {
+    width: 80px;
+    transition: 0.8s;
+}
+
+.social-icons a:hover img {
+    transform: translate(-30px);
+}
+
+.b {
+    font-size: 20px;
+}

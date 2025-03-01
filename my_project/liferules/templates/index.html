@@ -1,0 +1,645 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Easy to read this </title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles1.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src=" {% static 'img/box-3-nav.png' %} " alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#con">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Back to Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Header End -->
+
+
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="first">
+                        <svg viewBox="0 0 184 25" fill="#000" aria-hidden="true" style="text-size-adjust: 100%;">
+                            <path
+                                d="M14.57,2.57C14.57,.55,12.65-.06,11.04,.01V.19c.96,.07,1.7,.46,1.7,1.11,0,.45-.32,1.01-1.28,1.01-.76,0-2.02-.45-3.2-.84-1.3-.45-2.54-.87-3.57-.87-2.02,0-3.55,1.5-3.55,3.36,0,1.5,1.16,2.02,1.63,2.21l.03-.07c-.3-.2-.49-.42-.49-1.06,0-.54,.39-1.26,1.43-1.26,.94,0,2.17,.42,3.8,.88,1.4,.39,2.91,.76,3.75,.87v3.28l-1.58,1.3,1.58,1.36v4.49c-.81,.46-1.75,.61-2.56,.61-1.5,0-2.88-.42-4.02-1.68l4.26-2.07V5.73l-5.2,2.32c.54-1.38,1.55-2.41,2.66-3.08l-.03-.08C3.31,5.73,.5,8.56,.5,12.06c0,4.19,3.35,7.3,7.22,7.3,4.19,0,6.65-3.28,6.61-6.75h-.08c-.61,1.33-1.63,2.59-2.78,3.25v-4.38l1.65-1.33-1.65-1.33v-3.28c1.53,0,3.11-1.01,3.11-2.96M5.8,14.13l-1.21,.61c-.74-.96-1.23-2.32-1.23-4.07,0-.72,.08-1.7,.32-2.39l2.14-.96-.03,6.8h0Zm19.47-5.76l-.81,.64-2.47-2.2-2.86,2.21V.48l-3.89,2.69c.45,.15,.99,.39,.99,1.43v11.81l-1.33,1.01,.12,.12,.67-.46,2.32,2.12,3.11-2.07-.1-.15-.79,.52-1.08-1.08v-7.12l.74-.54,1.7,1.48v6.19c0,3.92-.87,4.73-2.63,5.37v.1c2.93,.12,5.57-.87,5.57-5.89v-6.75l.88-.72-.12-.15h0Zm5.22,10.8l4.51-3.62-.12-.17-2.36,1.87-2.71-2.14v-1.33l4.68-3.3-2.36-3.67-5.2,2.86v6.8l-1.01,.79,.12,.15,.96-.76,3.5,2.54h-.01Zm-.69-5.67v-5.15l2.27,3.55-2.27,1.6ZM53.65,1.61c0-.32-.08-.59-.2-.96h-.07c-.32,.87-.67,1.33-1.68,1.33-.88,0-1.58-.54-1.95-.94,0,.03-2.96,3.42-2.96,3.42l.15,.12,.84-.96c.64,.49,1.21,1.06,2.63,1.08V13.34l-6.06-10.5c-.47-.79-1.28-1.97-2.66-1.97-1.63,0-2.86,1.4-2.66,3.77h.1c.12-.59,.47-1.33,1.18-1.33,.57,0,1.03,.54,1.3,1.03v3.38c-1.87,0-2.93,.87-2.93,2.34,0,.61,.45,1.94,1.72,2.17v-.07c-.17-.17-.34-.32-.34-.67,0-.57,.42-.88,1.18-.88,.12,0,.3,.03,.37,.05v4.38c-2.2,.03-3.89,1.23-3.89,3.31s1.7,2.88,3.47,2.78v-.07c-1.11-.12-1.68-.69-1.68-1.5,0-.88,.64-1.36,1.45-1.36s1.43,.52,1.95,1.11l2.96-3.33-.12-.12-.76,.87c-1.14-1.01-1.87-1.48-3.18-1.68V4.67l8.36,14.57h.45V4.72c1.6-.1,3.03-1.3,3.03-3.11m2.81,17.54l4.51-3.62-.12-.17-2.36,1.87-2.71-2.14v-1.33l4.68-3.3-2.36-3.67-5.2,2.86v6.8l-1.01,.79,.12,.15,.96-.76,3.5,2.54h0Zm-.69-5.67v-5.15l2.27,3.55-2.27,1.6Zm21.22-5.52l-.69,.52-1.97-1.68-2.29,2.07,.94,.88v7.72l-2.34-1.6v-6.26l.81-.57-2.41-2.24-2.24,2.07,.94,.88v7.46l-.15,.1-2.2-1.6v-6.13c0-1.43-.72-1.85-1.63-2.41-.76-.47-1.16-.91-1.16-1.63,0-.79,.69-1.11,.91-1.23-.79-.03-2.98,.76-3.03,2.76-.03,1.03,.47,1.48,.99,1.97,.52,.49,1.01,.96,1.01,1.83v6.01l-1.06,.84,.12,.12,1.01-.79,2.63,2.14,2.51-1.75,2.76,1.75,5.42-3.2v-6.95l1.21-.94-.1-.15h0Zm18.15-5.84l-1.03,.94-2.32-2.02-3.13,2.51V1.19h-.19V18.12c-.34-.05-1.06-.25-1.85-.37V3.58c0-1.03-.74-2.47-2.59-2.47s-3.01,1.56-3.01,2.91h.08c.1-.61,.52-1.16,1.13-1.16s1.18,.39,1.18,1.78v4.04c-1.75,.07-2.81,1.16-2.81,2.34,0,.67,.42,1.92,1.75,1.97v-.1c-.45-.19-.54-.42-.54-.67,0-.59,.57-.79,1.36-.79h.19v6.51c-1.5,.52-2.2,1.53-2.2,2.78,0,1.72,1.38,3.05,3.4,3.05,1.43,0,2.44-.25,3.75-.54,1.06-.22,2.21-.47,2.83-.47,.79,0,1.14,.35,1.14,.91,0,.72-.27,1.08-.69,1.21v.1c1.7-.32,2.69-1.3,2.69-2.83s-1.5-2.54-3.18-2.54c-.87,0-2.44,.27-3.72,.57-1.43,.32-2.66,.47-3.11,.47-.72,0-1.6-.32-1.6-1.28,0-.87,.72-1.56,2.49-1.56,.96,0,1.9,.15,3.08,.42,1.26,.27,2.12,.64,3.2,.64,1.5,0,2.71-.54,2.71-2.74V3.29l1.11-1.01-.12-.15h0Zm-4.24,6.78c-.27,.3-.59,.54-1.11,.54-.57,0-.87-.3-1.14-.54V3.81l.74-.59,1.5,1.28v4.41h0Zm0,2.41c-.25-.25-.57-.47-1.11-.47s-.91,.27-1.14,.47v-2.17c.22,.19,.59,.49,1.14,.49s.87-.25,1.11-.49v2.17Zm0,5.1c0,.84-.42,1.78-1.5,1.78-.17,0-.57-.03-.74-.05v-6.58c.25-.22,.57-.52,1.14-.52,.52,0,.81,.25,1.11,.52v4.86h0Zm8.78,2.74l5.03-3.13v-6.85l-3.25-2.39-5.03,2.88v6.78l-.99,.79,.1,.15,.81-.67,3.33,2.44h0Zm-.37-3.55v-7.3l2.51,1.87v7.3l-2.51-1.87Zm15.01-8.65c-.39,.27-.74,.42-1.11,.42-.39,0-.88-.25-1.14-.57,0,.03-1.87,2.02-1.87,2.02l-1.87-2.02-3.05,2.12,.1,.17,.81-.54,1.11,1.21v6.63l-1.33,1.01,.12,.12,.67-.46,2.49,2.12,3.15-2.09-.1-.15-.81,.49-1.28-1.16v-7.28c.52,.57,1.11,1.06,1.82,1.06,1.28,0,2.14-1.53,2.29-3.11m11.88,9.81l-.94,.59-5.2-7.76,.27-.37c.57,.34,1.08,.81,2.17,.81s2.47-1.14,2.59-3.23c-.27,.37-.81,.81-1.7,.81-.64,0-1.28-.42-1.67-.81l-3.55,5.22,4.71,7.17,3.42-2.27-.1-.17h0Zm-6.31,.19l-.79,.52-1.08-1.08V.48l-3.89,2.69c.45,.15,.99,.39,.99,1.43v11.81l-1.33,1.01,.12,.12,.67-.46,2.32,2.12,3.11-2.07-.1-.15h0Zm22.89-14.39c0-2.02-1.92-2.63-3.53-2.56V.19c.96,.07,1.7,.46,1.7,1.11,0,.45-.32,1.01-1.28,1.01-.76,0-2.02-.45-3.2-.84-1.3-.45-2.54-.87-3.57-.87-2.02,0-3.55,1.5-3.55,3.35,0,1.5,1.16,2.02,1.63,2.21l.03-.07c-.3-.2-.49-.42-.49-1.06,0-.54,.39-1.26,1.43-1.26,.94,0,2.17,.42,3.8,.88,1.4,.39,2.91,.76,3.75,.87v3.28l-1.58,1.3,1.58,1.36v4.49c-.81,.46-1.75,.61-2.56,.61-1.5,0-2.89-.42-4.02-1.68l4.26-2.07V5.73l-5.2,2.32c.54-1.38,1.55-2.41,2.66-3.08l-.03-.08c-3.08,.84-5.89,3.67-5.89,7.17,0,4.19,3.35,7.3,7.22,7.3,4.19,0,6.65-3.28,6.61-6.75h-.07c-.61,1.33-1.63,2.59-2.78,3.25v-4.38l1.65-1.33-1.65-1.33v-3.28c1.53,0,3.11-1.01,3.11-2.96m-8.78,11.56l-1.21,.61c-.74-.96-1.23-2.32-1.23-4.07,0-.72,.07-1.7,.32-2.39l2.14-.96-.03,6.8h0Zm11.93-12.31l-2.17,1.82,1.85,2.09,2.17-1.82-1.85-2.09Zm3.3,15.15l-.79,.52-1.08-1.08v-7.17l.91-.72-.12-.15-.76,.59-1.8-2.14-2.96,2.07,.1,.17,.74-.49,.99,1.23v6.61l-1.33,1.01,.12,.12,.67-.46,2.32,2.12,3.11-2.07-.1-.15h0Zm16.63-.1l-.74,.49-1.16-1.11v-7.03l.94-.72-.12-.15-.84,.64-2.47-2.2-2.78,2.17-2.44-2.17-2.74,2.14-1.85-2.14-2.96,2.07,.1,.17,.74-.49,1.06,1.21v6.61l-.81,.81,2.36,2,2.29-2.07-.94-.88v-7.04l.61-.45,1.7,1.48v6.16l-.79,.81,2.39,2,2.24-2.07-.94-.88v-7.04l.59-.47,1.72,1.5v6.06l-.69,.72,2.41,2.2,3.18-2.17-.1-.15h.02Zm8.6-1.5l-2.36,1.87-2.71-2.14v-1.33l4.68-3.3-2.36-3.67-5.2,2.86v6.93l3.57,2.59,4.51-3.62-.12-.17h0Zm-5.08-1.88v-5.15l2.27,3.55-2.27,1.6Zm14.12-.97l-2-1.53c1.33-1.16,1.8-2.63,1.8-3.69,0-.15-.03-.42-.05-.67h-.08c-.19,.54-.72,1.01-1.53,1.01s-1.26-.45-1.75-.99l-4.58,2.54v3.72l1.75,1.38c-1.75,1.55-2.09,2.51-2.09,3.4s.52,1.67,1.41,2.02l.07-.12c-.22-.19-.42-.32-.42-.79,0-.34,.35-.88,1.14-.88,1.01,0,1.63,.69,1.95,1.06,0-.03,4.38-2.69,4.38-2.69v-3.77h0Zm-1.03-3.05c-.69,1.23-2.21,2.44-3.11,3.13l-1.11-.94v-3.62c.45,.99,1.36,1.82,2.54,1.82,.69,0,1.14-.12,1.67-.39m-1.9,8.13c-.52-1.16-1.63-2-2.86-2-.3,0-1.21-.03-2,.46,.47-.79,1.87-2.21,3.65-3.28l1.21,1.01v3.8Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div style="margin-top: 120px;">
+                        <a href="static/img/index_video.mp4"><img src="static/images/play.png" alt="" class="play-btn ">Watch
+                            More</a>
+                    </div>
+                </div><!-- col md 1 end -->
+
+                <div class="col-md-6 text-center">
+                    <img src="static/img/study.png" alt="" class="img-fluid ms-2">
+                </div><!-- Col md 2 end-->
+            </div><!-- Row end-->
+        </div>
+        <img src="static/images/wave1.png" alt="" class="bottom-img">
+    </section>
+
+    <!--  Services Section   -->
+
+    <!-------------Main Start----------------->
+    <div class="div">
+        <div class="row">
+            <div class="col-md-3" id="filter">
+                <div class="filter-sec mt-5 ">
+                    <ul>
+                        <p class="r">Rules</p>
+                        <a href="#First_1">Never put too much trust in friends</a><br>
+                        <a href="#First_2"> What am I motivated about and why?</a><br>
+                        <a href="#First_3">You are your own best leader</a><br>
+                        <a href="#First_4">Always say less than necessary</a><br>
+                        <a href="#First_5">Time</a><br>
+                        <a href="#First_6">People Want What Is Hard To Get</a><br>
+                        <a href="#First_7">If It’s Scarce, People Want More</a><br>
+                        <a href="#First_8">Stand Out From The Competition</a><br>
+                        <a href="#First_9"> Hide Your Intentions</a><br>
+                        <a href="#First_10">Show Confidence</a><br>
+                        <a href="#First_11">Know Your Enemies</a><br>
+                        <a href="#First_12">Calculate Value</a><br>
+                        <a href="#First_13">Laws of Human Behavior</a><br>
+                        <a href="#First_14">Motivation</a><br>
+                        <a href="#First_15">Powerful Words</a><br>
+                        <a href="#First_16">Plan all the way to the end</a><br>
+                    </ul>
+                </div>
+                <hr>
+                <div>
+                    <img class="filter-img" src="static/img/study_4.png" alt="">
+                </div>
+                <div>
+                    <img class="filter-img-1" src="static/img/study_11.webp" alt="">
+                </div>
+                <div>
+                    <img class="filter-img-1" src="static/img/study_9.png" alt="">
+                </div>
+                <!-- <div>
+                    <img class="filter-img-1" src="static/img/study_12.png" alt="">
+                </div> -->
+                <div>
+                    <img class="filter-img-1" src="static/img/study_7.png" alt="">
+                </div>
+                <div>
+                    <img class="filter-img-1" src="static/img/study_17.png" alt="">
+                </div>
+                <div>
+                    <img class="filter-img-1" src="static/img/study_18.png" alt="">
+                </div>
+                <div>
+                    <img class="filter-img-1" src="static/img/study_20.png" alt="">
+                </div>
+
+            </div><!-------col end-------->
+
+            <div class="col-md-9 mt-5">
+                <div id="First_1">
+                    <div class="common">
+                        <i class="i">
+                            1. Never put too much trust in friends
+                        </i>
+                        <p>But hire a former enemy and he will be more loyal than a friend, because he has more to
+                            prove. In fact, you have more to fear from friends than from enemies. If you have no
+                            enemies, find a way to make them.
+                        </p>
+                        <p>
+
+                            Since honesty rarely strengthens friendship, you may never know how a friend truly feels.
+                            Friends
+                            will
+                            say that they love your poetry, adore your music, envy your taste in clothes— maybe they
+                            mean
+                            it,
+                            often
+                            they do not.
+                        </p>
+                        <p>
+
+                            The key to power, then, is the ability to judge who is best able to further your interests
+                            in
+                            all
+                            situations. Keep friends for friendship, but work with the skilled and competent.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_2">
+                    <div class="common">
+                        <i class="i">
+                            2. What am I motivated about and why !
+                        </i>
+                        <p>
+                            At the very beginning of achieving anything, you have to determine what you are going after
+                            but
+                            most
+                            importantly why. Your actions will be determined in direct proportion to what level of
+                            desire
+                            you
+                            have
+                            to achieve your goals and dreams. Your desire is directly affected by the reason that you
+                            are
+                            going
+                            after something.
+                        </p>
+                        <p>
+
+                            So before you draw the map of achievement, you must really dig deep into your emotions and
+                            determine
+                            what would set the gasoline on your fire. You should put a lot of time and effort into this
+                            and
+                            decide
+                            that there are no other options than fulfilling these goals and dreams.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_3">
+                    <div class="common">
+                        <i class="i">
+                            3. You are your own best leader
+                        </i>
+                        <p>
+                            You really are your very own best leader. <b> Success is not going to come out of thin air,
+                                as
+                                you
+                                are
+                                the
+                                only one who is going to lead you to success.</b>
+                        </p>
+                        <p>
+
+                            Pay attention to your thoughts, make sure that what you are saying to yourself is things
+                            like
+                            <i>“If
+                                I
+                                don’t start now then I won’t ever start”</i> or <i>“Success isn’t going to work unless I
+                                work”</i>.
+                            Start being
+                            strict on your daily thoughts because, in order to take action, you must first think about
+                            action.
+                        </p>
+                        <p><i>
+                                “
+                                And just as Newton’s Laws describe the motion of physical objects, these Laws of Human
+                                Behavior
+                                aim
+                                to
+                                provide a general model for how humans behave. People tend to stick to the status quo
+                                unless
+                                the
+                                forces
+                                of friction or fuel push us off of our path; behavior is a function of the person and
+                                their
+                                environment;
+                                every decision includes tradeoffs and the potential for unintended consequences.
+                            </i></p>
+                    </div>
+                </div>
+
+                <div id="First_4">
+                    <div class="common">
+                        <i class="i">
+                            4. Always say less than necessary
+                        </i>
+                        <p>
+                            One oft-told tale about Kissinger… involved a report that Winston Lord had worked on for
+                            days.
+                            After
+                            giving it to Kissinger, he got it back with the notation,<b> “Is this the best you can
+                                do?”</b>
+                            Lord
+                            rewrote
+                            and polished and finally resubmitted it; back it came with the same curt question. After
+                            redrafting
+                            it
+                            one more time— and once again getting the same question from Kissinger-Lord snapped,<i>
+                                “Damn
+                                it,
+                                yes,
+                                it’s
+                                the best I can do. ” To which Kissinger replied: “Fine, then I guess I’ll read it this
+                                time.
+                                ”
+                            </i>
+                        </p>
+                        <p>
+                            Persons who cannot control his words shows that he cannot control himself, and is unworthy
+                            of
+                            respect.
+                            But the human tongue is a beast that few can master. It strains constantly to break out of
+                            its
+                            cage,
+                            and
+                            if it is not tamed, it will run wild and cause you grief. <b>Power cannot accrue to those
+                                who
+                                squander
+                                their treasure of words.
+                            </b>
+                        </p>
+                        <p>
+                            Power is in many ways a game of appearances, and when you say less than necessary, you
+                            inevitably
+                            appear
+                            greater and more powerful than you are.
+                        </p>
+                        <p>
+                            Learn the lesson:<b> Once the words are out, you cannot take them back. Keep them under
+                                control.
+                                Be
+                                particularly careful with sarcasm:</b> The momentary satisfaction you gain with your
+                            biting
+                            words
+                            will be
+                            outweighed by the price you pay.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_5">
+                    <div class="common">
+                        <i class="i">
+                            5. Time
+                        </i>
+                        <p>
+                            Compared to Eternity, the seconds of right now are worth more than all the money, gold and
+                            silver in
+                            the
+                            world. It’s because we can have more money but we can’t have more time, because once it’s
+                            gone
+                            it’s
+                            never coming back.
+                        </p>
+                        <p>
+                            Time can be working for or against you. If you are working on things you want in the future,
+                            then it
+                            is
+                            working for you. If you have decided that right now isn’t the perfect time to go after what
+                            you
+                            want,
+                            then it’s working against you. Time is going to pass anyway, so make more of it now.
+                            <br>
+                        </p>
+                        <p>
+                            <i>“Suffer the pain of Self-Discipline or suffer the pain of regret.”</i>
+                        </p>
+                    </div>
+                </div>
+                <div id="First_6">
+                    <div class="common">
+                        <i class="i">
+                            6. People Want What Is Hard To Get
+                        </i>
+                        <p>
+                            The first psychological law of power stems from the concept of scarcity. People tend to
+                            assign a
+                            higher value to something that becomes difficult to obtain. This inherent desire for what is
+                            hard to
+                            get can be observed in various aspects of life, including negotiations, marketing, and
+                            relationships.
+                        </p>
+                        <p>
+
+                            In negotiations, maintaining a firm stance can make your position more desirable. By
+                            presenting
+                            your terms as a limited opportunity, you can encourage others to agree more readily.
+                            Similarly,
+                            exclusive or limited edition products in marketing often generate increased demand due to
+                            their
+                            perceived rarity. In relationships, playing hard to get can create an allure that makes you
+                            more
+                            attractive.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_7">
+                    <div class="common">
+                        <i class="i">
+                            7. If It’s Scarce, People Want More
+                        </i>
+                        <p>
+                            The scarcity principle underpins the second law of power. When resources or opportunities
+                            are
+                            scarce,
+                            people tend to want them more. This principle not only influences decision-making but also
+                            drives
+                            competition.
+                        </p>
+                        <p>
+                            Companies often use the scarcity principle in product releases, limited-time offers, and
+                            exclusive
+                            events. Creating a sense of urgency or exclusivity stimulates demand and generates buzz
+                            around
+                            their
+                            offerings. To create scarcity in your endeavors, consider limiting the availability of your
+                            products
+                            or services or creating a sense of urgency through deadlines or countdowns.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_8">
+                    <div class="common">
+                        <i class="i">
+                            8. Stand Out From The Competition
+                        </i>
+                        <p>
+                            The first thing you must overcome to win is being unknown and blending in with the crowd.
+                            The
+                            first
+                            step
+                            to gain a psychological edge and some level of power over competitors is to become known for
+                            something,
+                            be unique, be so good they can’t ignore you. You must find your edge in the industry,
+                            career,
+                            business,
+                            or sport you compete in.
+
+                        </p>
+                    </div>
+                </div>
+                <div id="First_9">
+                    <div class="common">
+                        <i class="i">
+                            9. Hide Your Intentions
+                        </i>
+                        <p>
+                            Don’t give away your plans, goals, and strategy to those you are competing with. It’s easier
+                            to
+                            accomplish your goals against competitors when only you know what they are ultimately. Leave
+                            everyone
+                            guessing at what your game is and targets are, they will be easier to win that way.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_10">
+                    <div class="common">
+                        <i class="i">
+                            10. Show Confidence
+                        </i>
+                        <p>
+                            If you don’t show confidence in yourself you can’t expect anyone else to believe in you. You
+                            must
+                            walk,
+                            talk, and behave confidently to believe in yourself and have an edge over those that doubt
+                            their
+                            self. A
+                            psychological edge starts with faith in yourself and your process. Few have this confidence
+                            but
+                            will
+                            follow those who do.
+                        </p>
+                    </div>
+                </div>
+                <div id="First_11">
+                    <div class="common">
+                        <i class="i">
+                            11. Know Your Enemies
+                        </i>
+                        <p>
+                            Know your enemies as well as they know their self. Know their strengths and weaknesses to
+                            better
+                            compete
+                            at their own game. <br>
+                        </p>
+                        <p>
+                            <i>
+                                “If you know the enemy and know yourself, you need not fear the result of a hundred
+                                battles.
+                                If
+                                you
+                                know yourself but not the enemy, for every victory gained you will also suffer a defeat.
+                                If
+                                you
+                                know
+                                neither the enemy nor yourself, you will succumb in every battle.”
+                            </i>
+                        </p>
+                    </div>
+                </div>
+                <div id="First_12">
+                    <div class="common">
+                        <i class="i">
+                            12. Calculate Value
+                        </i>
+                        <p>
+                            It’s a psychological power to calculate the value of everything in your life to determine if
+                            they
+                            are
+                            worth your time, energy, and money. This goes for services, food, employees, products, and
+                            even
+                            if
+                            your
+                            job is worth <br>
+
+                            This applies to whether you get the value for your cost of living where you live and value
+                            for
+                            your
+                            tax
+                            expenses to your local and national government. Calculating value allows you to make
+                            rational
+                            and
+                            intelligent investments of your time, energy, and money. This can be a huge psychological
+                            edge
+                            over
+                            those that put no thought into cost versus value in all areas of their life. <br><br>
+
+                            <i>“Price is what you pay. Value is what you get.”</i>
+                        </p>
+                    </div>
+                </div>
+                <div id="First_13">
+                    <div class="common">
+                        <i class="i">
+                            13. Laws of Human Behavior
+                        </i>
+                        <p>
+                            People do things for their own reasons, not ours! <br>
+                            People do not change their minds; they make new decisions based on new information.<br>
+                            People make decisions based on emotion, justify with facts.<br>
+                            People want to be part of something larger than themselves.<br>
+                            People accept recognition, avoid accountability.<br>
+                            People want to be treated as unique or special.<br>
+                            People want to feel in control of their life.<br>
+                            People want to know why they should do something rather than how to do it.<br>
+                        </p>
+                    </div>
+                </div>
+                <div id="First_14">
+                    <div class="common">
+                        <i class="i">
+                            14. Motivation
+                        </i>
+                        <p>
+                            <i>
+                                “All our dreams can come true, if we have the courage to pursue them.”<br>
+                                “The secret of getting ahead is getting started.”<br>
+                                “Only the paranoid survive.”<br>
+                                “Write it. Shoot it. Publish it. Crochet it. Sauté it. Whatever. MAKE.” <br>
+                                “The best time to plant a tree was 20 years ago. The second best time is now.”<br>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+                <div id="First_15">
+                    <div class="common">
+                        <i class="i">
+                            15. Powerful Words
+                        </i>
+                        <p>
+                            <i>
+                                “Success is the sum of small efforts, repeated day-in and day-out.” <br>
+                                “Success consists of going from failure to failure without loss of enthusiasm.” <br>
+                                “Take risks: if you win, you will be happy; if you lose, you will be wise.”<br>
+                                “That which does not kill us makes us stronger.”
+                            </i>
+                        </p>
+
+                    </div>
+                </div>
+                <div id="First_16">
+                    <div class="common">
+                        <i class="i">
+                            16. Plan all the way to the end
+                        </i>
+                        <p>
+                            <i>
+                                The ending is everything. Plan all the way to it, taking into account all the possible
+                                consequences, obstacles, and twists of fortune that might reverse your hard work and
+                                give the glory to others. By planning to the end you will not be overwhelmed by
+                                circumstances and you will know when to stop. Gently guide fortune and help determine
+                                the future by thinking far ahead.
+                            </i>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------ Testimonials  ----------------------->
+    <section id="testimonials">
+        <div class="container ">
+            <h1 class="title text-center" style="font-family: Lombardia Script;">$ What Clients Say $</h1>
+            <div class="row offset-1">
+                <div class="col-md-5 testimonials">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio, esse optio eum commodi
+                        tenetur, quisquam, accusamus culpa eos voluptas minima omnis aut fugiat provident modi facere
+                        quod iure. Harum?</p>
+                    <img src="static/images/user1.jpg" alt="">
+                    <p class="user-details"><b>Agelina</b><br>Co-founder at-xyz</p>
+                </div>
+                <!--First col end-->
+                <div class="col-md-5 testimonials">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit odio, esse optio eum commodi
+                        tenetur, quisquam, accusamus culpa eos voluptas minima omnis aut fugiat provident modi facere
+                        quod iure. Harum?</p>
+                    <img src="static/images/user2.jpg" alt="">
+                    <p class="user-details"><b>johan doe</b><br>director at-xyz</p>
+                </div>
+                <!--second col end-->
+            </div>
+        </div>
+    </section>
+
+    <!-------------- Footer start -------------->
+
+
+    <!--------Footer section----------->
+    <section id="footer">
+        <img src="static/images/wave2.png" alt="" class="footer-img">
+        <div class="container ">
+            <div class="row ">
+                <!-- <div class="col-md-4 footer-box" >
+                    <img src="static/box-3-nav.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est aspernatur rem assumenda
+                        nam asperiores consequuntur blanditiis porro ut voluptatibus.</p>
+                </div> -->
+                <div class="col-md-4 footer-box" id="con">
+                    <p><b>Contact Us</b></p>
+                    <p><i class="bi bi-geo-alt"></i>World Hart Center, Nothing Universe</p>
+                    <p><i class="bi bi-voicemail"></i>+1 0000 000 000</p>
+                    <p><i class="bi bi-envelope-heart"></i>xyz@gmail.com</p>
+                </div>
+                <div class="col-md-3 footer-box"></div>
+                <div class="col-md-4 footer-box">
+                    <!------------- Social Media section----------------->
+                    <section id="social-media">
+                        <div class="container text-center">
+                            <p><b>Find us on social media</b></p>
+                        </div>
+                        <div class="social-icons text-center">
+                            <a href="#"><img src="static/images/facebook-icon.png" alt=""></a>
+                            <a href="https://www.instagram.com/_vaibhav_pisudde"><img src="static/images/instagram-icon.png" alt=""></a>
+                            <a href="#"><img src="static/images/twitter-icon.png" alt=""></a>
+                            <a href="#"><img src="static/images/whatsapp-icon.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/vaibhav-pisudde"><img src="static/images/linkedin-icon.png" alt=""></a>
+                            <a href="https://www.snapchat.com/add/vaibhav4115"><img src="static/images/snapchat-icon.png" alt=""></a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> <i class="bi bi-alipay"></i>&nbsp;&nbsp;Website Crafted by <i Class="b">ⓥ ⓐ ⓘ ⓑ ⓗ ⓐ
+                    ⓥ</i></p>
+        </div>
+    </section>
+
+    <!--------   Smooth Scroll------------>
+    <script src="static/assets/js/smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script src="{% static 'asset/js/popper.min.js' %}"></script>
+    <script src="{% static 'asset/js/bootstrap.min.js' %}"></script>
+
+
+
+</body>
+
+</html>
